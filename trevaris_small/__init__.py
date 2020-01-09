@@ -23,4 +23,7 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
+    from . import home
+    app.register_blueprint(home.bp)
+
     return app
