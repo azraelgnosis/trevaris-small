@@ -1,1 +1,1 @@
-web: gunicorn trevaris_small.wsgi:app
+web: gunicorn wsgi:app
