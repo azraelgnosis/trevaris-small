@@ -1,0 +1,1 @@
+web: gunicorn trevaris_small.wsgi:app
