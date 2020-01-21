@@ -3,20 +3,21 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Foodbyte</h5>
-                    </div>
-                    <div class="card-body">
-                        <iframe src="https://food-byte.herokuapp.com"></iframe>  
-                    </div>
-                    <div class="card-footer">
-                        <a class="card-link" href="https://github.com/azraelgnosis/trevaris-small">github</a>
+            {% for project in projects %}
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">{{ project["title"] }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="{{ project['link'] }}"></iframe>
+                        </div>
+                        <div class="card-footer">
+                            <a class="card-link" href="{{ project['github'] }}">github</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            {% endfor %}
         <div class="row"></div>
     </div>
 {% endblock %}
